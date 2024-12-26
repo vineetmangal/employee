@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <title>Employee Management</title>
+  <script defer src="employee.js"></script>
+</head>
+<body>
+  <h1>Employee Management</h1>
+
+  <!-- Button to show form to create a new employee -->
+  <button onclick="showCreateForm()">Create New Employee</button>
+
+  <hr>
+
+  <!-- Employee list area -->
+  <div id="employee-list"></div>
+
+  <hr>
+
+  <!-- Form area (Create or Edit) -->
+  <div id="employee-form" style="display:none;">
+    <h2 id="form-title">Create Employee</h2>
+    <form onsubmit="saveEmployee(event)">
+      <input type="hidden" id="employee-id" />
+      <label for="first-name">First Name:</label>
+      <input type="text" id="first-name" required /><br/>
+
+      <label for="last-name">Last Name:</label>
+      <input type="text" id="last-name" required /><br/>
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" required /><br/>
+
+      <label for="department">Department:</label>
+      <input type="text" id="department" /><br/>
+
+      <label for="hire-date">Hire Date:</label>
+      <input type="date" id="hire-date" /><br/><br/>
+
+      <button type="submit">Save</button>
+      <button type="button" onclick="cancelForm()">Cancel</button>
+    </form>
+  </div>
+</body>
+</html>
